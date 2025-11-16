@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breadfast Salary</title>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- App Icon -->
+  <link rel="icon" href="logo.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      width: 90%;
+      max-width: 400px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ac0f8a;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #ac0f8a;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #8d0a70;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="logo.png" class="logo" alt="logo">
+    <h2>كشف المرتب</h2>
+
+    <input type="number" id="code" placeholder="اكتب الكود الوظيفي">
+
+    <button onclick="go()">عرض المرتب</button>
+  </div>
+
+<script>
+function go() {
+  let c = document.getElementById("code").value;
+  if(c === "") { alert("اكتب الكود الأول"); return; }
+  window.location.href = "https://script.google.com/macros/s/AKfycbwpV5JFxjhgwxEZCT-qWf0tQSiYYwG05rhH46qXSsnpWmAN0jWqwF3zMVnT5i7kDEMp/exec?id=" + c;
+}
+</script>
+
+</body>
+</html>
