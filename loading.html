@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>جاري التحميل...</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f7f7f7;
+      font-family: sans-serif;
+    }
+    .loader {
+      width: 70px;
+      height: 70px;
+      border: 8px solid #ddd;
+      border-top: 8px solid #ac0f8a;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <script>
+    // بعد ما الصفحة تحمل، نعمل تحويل
+    window.onload = function () {
+      setTimeout(() => {
+        window.location.href = "index.html"; // الصفحة الأساسية
+      }, 1500); // ثانية ونص (تقدر تغير الرقم)
+    };
+  </script>
+</head>
+
+<body>
+  <div class="loader"></div>
+</body>
+</html>
